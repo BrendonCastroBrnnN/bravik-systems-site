@@ -6,6 +6,7 @@ import {
   Mail,
   Phone,
 } from "lucide-react";
+import { CONTACT } from "../../constants/contact";
 
 const navLinks = [
   {
@@ -38,27 +39,27 @@ const socialLinks = [
   {
     icon: Instagram,
     label: "Instagram",
-    href: "#",
+    href: CONTACT.instagramUrl,
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "#",
+    href: CONTACT.linkedinUrl,
   },
   {
     icon: Github,
     label: "GitHub",
-    href: "#",
+    href: CONTACT.githubUrl,
   },
   {
     icon: Mail,
     label: "E-mail",
-    href: "mailto:contato@braviksystems.com.br",
+    href: `mailto:${CONTACT.email}`,
   },
   {
     icon: Phone,
     label: "WhatsApp",
-    href: "https://wa.me/5511999999999",
+    href: CONTACT.whatsappUrl,
   },
 ];
 
@@ -158,6 +159,8 @@ export function Footer() {
                   <a
                     key={label}
                     href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={label}
                     className="card flex items-center justify-center"
                     style={{
@@ -242,30 +245,34 @@ export function Footer() {
               }}
             >
               <a
-                href="mailto:contato@braviksystems.com.br"
+                href={`mailto:${CONTACT.email}`}
                 style={{
                   fontSize: 13,
                   color: "rgba(255,255,255,.38)",
                   textDecoration: "none",
                 }}
               >
-                contato@braviksystems.com.br
+                {CONTACT.email}
               </a>
 
               <a
-                href="https://wa.me/5511999999999"
+                href={CONTACT.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   fontSize: 13,
                   color: "rgba(255,255,255,.38)",
                   textDecoration: "none",
                 }}
               >
-                WhatsApp
+                {CONTACT.phone}
               </a>
             </div>
 
             <a
-              href="https://wa.me/5511999999999"
+              href={CONTACT.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary"
               style={{
                 fontSize: 12,
@@ -273,7 +280,6 @@ export function Footer() {
               }}
             >
               Falar Agora
-
               <ArrowRight size={13} />
             </a>
           </div>
