@@ -11,13 +11,14 @@ import {
   ChevronRight, Boxes, Eye
 } from "lucide-react";
 import * as Accordion from "@radix-ui/react-accordion";
-import { products } from "./data/products";
+import { Navbar } from "./components/layout/Navbar";
 import { cases } from "./data/cases";
-import { problems } from "./data/problems";
-import { services } from "./data/services";
-import { processSteps } from "./data/process";
-import { techs } from "./data/techs";
 import { faqs } from "./data/faqs";
+import { problems } from "./data/problems";
+import { processSteps } from "./data/process";
+import { products } from "./data/products";
+import { services } from "./data/services";
+import { techs } from "./data/techs";
 
 
 // ─── Global Styles ────────────────────────────────────────────────────────────
@@ -277,71 +278,6 @@ function HeroViz() {
 }
 
 // ─── Navbar ───────────────────────────────────────────────────────────────────
-
-function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
-  useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 48);
-    window.addEventListener("scroll", fn);
-    return () => window.removeEventListener("scroll", fn);
-  }, []);
-  const links = [
-    { l: "Soluções",   h: "#solucoes"  },
-    { l: "Produtos",   h: "#produtos"  },
-    { l: "Cases",      h: "#cases"     },
-    { l: "Sobre",      h: "#sobre"     },
-    { l: "Processo",   h: "#processo"  },
-  ];
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50"
-      style={{
-        background: scrolled ? "rgba(7,7,7,.94)" : "transparent",
-        backdropFilter: scrolled ? "blur(24px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(255,255,255,.055)" : "1px solid transparent",
-        transition: "all .4s cubic-bezier(.16,1,.3,1)",
-      }}>
-      <div className="container flex items-center justify-between" style={{ height: 64 }}>
-        <a href="#" className="flex items-center gap-2.5" style={{ textDecoration: "none" }}>
-          <div className="rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ width: 32, height: 32, background: "#e5173f" }}>
-            <span className="mono font-bold text-white" style={{ fontSize: 13 }}>B</span>
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="font-bold text-white tracking-tight" style={{ fontSize: 13, fontFamily: "'Bricolage Grotesque',sans-serif" }}>BRAVIK</span>
-            <span className="mono" style={{ fontSize: 8, letterSpacing: ".18em", color: "rgba(255,255,255,.3)", textTransform: "uppercase" }}>Systems</span>
-          </div>
-        </a>
-        <nav className="hidden lg:flex items-center gap-8">
-          {links.map(({ l, h }) => <a key={h} href={h} className="nav-link">{l}</a>)}
-        </nav>
-        <div className="hidden lg:flex items-center gap-3">
-          <a href="mailto:contato@braviksystems.com.br" className="nav-link">Contato</a>
-          <a href="https://wa.me/5511999999999" className="btn-primary">
-            Falar com Especialista <ArrowRight size={14} />
-          </a>
-        </div>
-        <button onClick={() => setOpen(!open)} className="lg:hidden" style={{ color: "rgba(255,255,255,.6)", background: "none", border: "none", cursor: "pointer" }}>
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
-      </div>
-      {open && (
-        <div className="lg:hidden px-6 py-6 flex flex-col gap-5"
-          style={{ background: "rgba(7,7,7,.98)", borderTop: "1px solid rgba(255,255,255,.055)" }}>
-          {links.map(({ l, h }) => (
-            <a key={h} href={h} onClick={() => setOpen(false)}
-              style={{ color: "rgba(255,255,255,.5)", fontSize: 15, textDecoration: "none" }}>
-              {l}
-            </a>
-          ))}
-          <a href="https://wa.me/5511999999999" className="btn-primary" style={{ marginTop: 8, justifyContent: "center" }}>
-            Falar com Especialista <ArrowRight size={14} />
-          </a>
-        </div>
-      )}
-    </header>
-  );
-}
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
