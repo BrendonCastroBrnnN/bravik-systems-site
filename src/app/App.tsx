@@ -13,6 +13,8 @@ import {
 import * as Accordion from "@radix-ui/react-accordion";
 import { Navbar } from "./components/layout/Navbar";
 import { Hero } from "./components/sections/Hero";
+import { Manifesto } from "./components/sections/Manifesto";
+import { ValueProp } from "./components/sections/ValueProp";
 import { cases } from "./data/cases";
 import { faqs } from "./data/faqs";
 import { problems } from "./data/problems";
@@ -155,82 +157,7 @@ const G = `
 
 // ─── Manifesto Strip ──────────────────────────────────────────────────────────
 
-function Manifesto() {
-  const points = [
-    { icon: Brain,       text: "Entendemos o processo antes de propor qualquer solução" },
-    { icon: Target,      text: "O código é o meio — o resultado operacional é o objetivo" },
-    { icon: Shield,      text: "Arquitetura limpa, escalável e fácil de evoluir" },
-    { icon: TrendingUp,  text: "Tecnologia como ferramenta de negócio, não de custo" },
-  ];
-  return (
-    <section style={{ borderTop: "1px solid rgba(255,255,255,.055)", borderBottom: "1px solid rgba(255,255,255,.055)", padding: "40px 0" }}>
-      <div className="container">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {points.map(({ icon: Icon, text }, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * .08, duration: .6 }}
-              className="flex items-center gap-3">
-              <div className="rounded-xl flex-shrink-0 flex items-center justify-center"
-                style={{ width: 36, height: 36, background: "rgba(229,23,63,.1)", border: "1px solid rgba(229,23,63,.15)" }}>
-                <Icon size={15} color="#e5173f" />
-              </div>
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,.55)", lineHeight: 1.5 }}>{text}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // ─── Value Prop ───────────────────────────────────────────────────────────────
-
-function ValueProp() {
-  return (
-    <section className="section">
-      <div className="container">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-          <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }} transition={{ duration: .8, ease: [.16, 1, .3, 1] }}>
-            <div className="label mb-6">Nossa Diferença</div>
-            <h2 className="h2 mb-6">
-              Engenharia digital<br />
-              com visão prática<br />
-              <span className="red">de negócio.</span>
-            </h2>
-            <p style={{ fontSize: 17, color: "rgba(255,255,255,.48)", lineHeight: 1.7, marginBottom: 24 }}>
-              A Bravik Systems nasceu da combinação entre <strong style={{ color: "#f5f5f5", fontWeight: 600 }}>experiência prática em gestão empresarial e processos produtivos</strong> e conhecimento técnico em desenvolvimento de software — duas perspectivas que raramente coexistem na mesma equipe.
-            </p>
-            <p style={{ fontSize: 17, color: "rgba(255,255,255,.48)", lineHeight: 1.7 }}>
-              Isso nos permite entender o problema operacional antes de propor qualquer solução. O código é o meio. O resultado no processo do cliente é o objetivo.
-            </p>
-          </motion.div>
-
-          <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }} transition={{ duration: .8, ease: [.16, 1, .3, 1], delay: .1 }}
-            className="grid grid-cols-2 gap-4">
-            {[
-              { icon: Boxes,      title: "Visão de Negócio",      desc: "Entendemos processos, gargalos e impacto financeiro antes de qualquer linha de código." },
-              { icon: Code2,      title: "Excelência Técnica",    desc: "Arquitetura limpa, escalável e mantida com os mais altos padrões de desenvolvimento." },
-              { icon: Activity,   title: "Foco em Resultado",     desc: "Medimos sucesso pelos resultados do cliente — não pelo código entregue." },
-              { icon: Rocket,     title: "Visão de Longo Prazo",  desc: "Construímos soluções preparadas para crescer com a empresa pelos próximos anos." },
-            ].map(({ icon: Icon, title, desc }, i) => (
-              <div key={i} className="card p-5">
-                <div className="rounded-xl flex items-center justify-center mb-4"
-                  style={{ width: 40, height: 40, background: "rgba(229,23,63,.1)" }}>
-                  <Icon size={17} color="#e5173f" />
-                </div>
-                <h4 style={{ fontSize: 14, fontWeight: 700, marginBottom: 6, fontFamily: "'Bricolage Grotesque',sans-serif" }}>{title}</h4>
-                <p style={{ fontSize: 12, color: "rgba(255,255,255,.4)", lineHeight: 1.6 }}>{desc}</p>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 // ─── Problems ─────────────────────────────────────────────────────────────────
 
