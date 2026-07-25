@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import { HeroViz } from "./HeroViz";
+import { CONTACT } from "../../constants/contact";
 
 const heroBenefits = [
   {
@@ -141,7 +142,7 @@ export function Hero() {
               </a>
 
               <a
-                href="https://wa.me/5511999999999"
+                href={CONTACT.whatsappUrl}
                 className="btn-outline"
                 style={{
                   fontSize: 15,

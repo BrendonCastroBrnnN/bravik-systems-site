@@ -9,6 +9,9 @@ import {
   Shield,
 } from "lucide-react";
 
+import { COMPANY } from "../../constants/company";
+import { CONTACT } from "../../constants/contact";
+
 const trustSignals = [
   {
     icon: Shield,
@@ -138,13 +141,13 @@ export function CTA() {
           >
             Transforme processos manuais em tecnologia.
             Automatize tarefas. Acelere o crescimento do seu
-            negócio com soluções desenvolvidas sob medida pela
-            Bravik Systems.
+            negócio com soluções desenvolvidas sob medida pela{" "}
+            {COMPANY.name}.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://wa.me/5511999999999"
+              href={CONTACT.whatsappUrl}
               className="btn-primary"
               style={{
                 fontSize: 15,
@@ -159,7 +162,7 @@ export function CTA() {
             </a>
 
             <a
-              href="mailto:contato@braviksystems.com.br"
+              href={`mailto:${CONTACT.email}`}
               className="btn-outline"
               style={{
                 fontSize: 15,

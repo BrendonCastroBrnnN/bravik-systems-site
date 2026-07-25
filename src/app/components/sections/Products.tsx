@@ -5,8 +5,7 @@ import {
 } from "lucide-react";
 
 import { products } from "../../data/products";
-
-const WHATSAPP_URL = "https://wa.me/5511999999999";
+import { CONTACT } from "../../constants/contact";
 
 export function Products() {
   return (
@@ -185,7 +184,7 @@ export function Products() {
                 </div>
 
                 <a
-                  href={WHATSAPP_URL}
+                  href={CONTACT.whatsappUrl}
                   className="flex items-center gap-2 font-semibold"
                   style={{
                     fontSize: 13,
@@ -245,7 +244,7 @@ export function Products() {
           </div>
 
           <a
-            href={WHATSAPP_URL}
+            href={CONTACT.whatsappUrl}
             className="btn-outline flex-shrink-0"
             style={{ fontSize: 13 }}
             target="_blank"

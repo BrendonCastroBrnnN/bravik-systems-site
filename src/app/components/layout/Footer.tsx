@@ -7,6 +7,7 @@ import {
   Phone,
 } from "lucide-react";
 import { CONTACT } from "../../constants/contact";
+import { COMPANY } from "../../constants/company";
 
 const navLinks = [
   {
@@ -118,7 +119,7 @@ export function Footer() {
                     fontSize: 15,
                   }}
                 >
-                  BRAVIK SYSTEMS
+                  {COMPANY.name.toUpperCase()}
                 </span>
 
                 <span
@@ -130,7 +131,7 @@ export function Footer() {
                     textTransform: "uppercase",
                   }}
                 >
-                  Soluções Digitais
+                  {COMPANY.slogan}
                 </span>
               </div>
             </div>
@@ -300,8 +301,8 @@ export function Footer() {
               color: "rgba(255,255,255,.18)",
             }}
           >
-            © {new Date().getFullYear()} Bravik Systems · Todos
-            os direitos reservados
+            © {new Date().getFullYear()} {COMPANY.name} ·{" "}
+            {COMPANY.copyright}
           </p>
 
           <p
@@ -311,7 +312,7 @@ export function Footer() {
               color: "rgba(255,255,255,.18)",
             }}
           >
-            Desenvolvido pela Bravik Systems
+            {COMPANY.developedBy}
           </p>
         </div>
       </div>

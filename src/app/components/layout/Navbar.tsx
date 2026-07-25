@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
+import { COMPANY } from "../../constants/company";
+import { CONTACT } from "../../constants/contact";
 
 const navigationLinks = [
   {
@@ -92,7 +94,7 @@ export function Navbar() {
                 fontFamily: "'Bricolage Grotesque',sans-serif",
               }}
             >
-              BRAVIK
+              {COMPANY.shortName.toUpperCase()}
             </span>
 
             <span
@@ -104,7 +106,7 @@ export function Navbar() {
                 textTransform: "uppercase",
               }}
             >
-              Systems
+              {COMPANY.name.replace(`${COMPANY.shortName} `, "")}
             </span>
           </div>
         </a>
@@ -122,14 +124,14 @@ export function Navbar() {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="mailto:contato@braviksystems.com.br"
+            href={`mailto:${CONTACT.email}`}
             className="nav-link"
           >
             Contato
           </a>
 
           <a
-            href="https://wa.me/5511999999999"
+            href={CONTACT.whatsappUrl}
             className="btn-primary"
             target="_blank"
             rel="noopener noreferrer"
@@ -182,7 +184,7 @@ export function Navbar() {
           ))}
 
           <a
-            href="https://wa.me/5511999999999"
+            href={CONTACT.whatsappUrl}
             className="btn-primary"
             style={{
               marginTop: 8,
