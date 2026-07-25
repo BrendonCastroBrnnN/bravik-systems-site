@@ -12,13 +12,13 @@ import {
 } from "lucide-react";
 import * as Accordion from "@radix-ui/react-accordion";
 import { Navbar } from "./components/layout/Navbar";
+import { Cases } from "./components/sections/Cases";
 import { Hero } from "./components/sections/Hero";
 import { Manifesto } from "./components/sections/Manifesto";
 import { ValueProp } from "./components/sections/ValueProp";
 import { Problems } from "./components/sections/Problems";
 import { Products } from "./components/sections/Products";
 import { Solutions } from "./components/sections/Solutions";
-import { cases } from "./data/cases";
 import { faqs } from "./data/faqs";
 import { processSteps } from "./data/process";
 import { techs } from "./data/techs";
@@ -166,127 +166,6 @@ const G = `
 // ─── Solutions ────────────────────────────────────────────────────────────────
 
 // ─── Cases ────────────────────────────────────────────────────────────────────
-
-function CaseCard({ c, i }: { c: typeof cases[0]; i: number }) {
-  const [expanded, setExpanded] = useState(false);
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }} transition={{ delay: i * .08, duration: .7, ease: [.16, 1, .3, 1] }}
-      className="card overflow-hidden">
-      {/* Image */}
-      <div className="relative" style={{ aspectRatio: "16/7", background: "#1a1a1a", overflow: "hidden" }}>
-        {c.img ? (
-          <img src={c.img} alt={c.title} style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(.7)" }} />
-        ) : (
-          <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center",
-            background: "linear-gradient(135deg, #111 0%, #1a1a1a 100%)" }}>
-            <Brain size={48} color="rgba(229,23,63,.2)" />
-          </div>
-        )}
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(7,7,7,.9) 0%, transparent 60%)" }} />
-        <div style={{ position: "absolute", top: 16, left: 16 }}>
-          <span className="mono font-semibold px-3 py-1.5 rounded-full"
-            style={{ fontSize: 11, background: "rgba(7,7,7,.85)", color: "#e5173f", border: "1px solid rgba(229,23,63,.3)" }}>
-            {c.tag}
-          </span>
-        </div>
-        <div style={{ position: "absolute", top: 16, right: 16 }}>
-          <span className="mono px-2 py-1 rounded-lg"
-            style={{ fontSize: 10, background: "rgba(7,7,7,.75)", color: c.status === "Concluído" ? "#34D399" : "#818CF8",
-              border: `1px solid ${c.status === "Concluído" ? "rgba(52,211,153,.25)" : "rgba(129,140,248,.25)"}` }}>
-            {c.status}
-          </span>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="p-7">
-        <h3 style={{ fontSize: 22, fontWeight: 800, fontFamily: "'Bricolage Grotesque',sans-serif", letterSpacing: "-.02em", marginBottom: 6 }}>
-          {c.title}
-        </h3>
-        <p style={{ fontSize: 14, color: "rgba(255,255,255,.5)", lineHeight: 1.6, marginBottom: 20 }}>{c.headline}</p>
-
-        {/* Highlights */}
-        <div className="flex flex-col gap-2 mb-6">
-          {c.highlights.map((h) => (
-            <div key={h} className="flex items-center gap-2">
-              <div className="rounded-full flex-shrink-0" style={{ width: 4, height: 4, background: "#e5173f" }} />
-              <span style={{ fontSize: 12, color: "rgba(255,255,255,.5)" }}>{h}</span>
-            </div>
-          ))}
-        </div>
-
-        {/* Expanded */}
-        {expanded && (
-          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }} transition={{ duration: .4, ease: [.16, 1, .3, 1] }}>
-            <div className="border-t pt-6 mt-2 space-y-5" style={{ borderColor: "rgba(255,255,255,.06)" }}>
-              {[
-                { l: "Contexto",  t: c.context   },
-                { l: "Desafio",   t: c.challenge  },
-                { l: "Solução",   t: c.solution   },
-                { l: "Impacto",   t: c.impact     },
-              ].map(({ l, t }) => (
-                <div key={l}>
-                  <p className="mono font-semibold mb-1.5" style={{ fontSize: 10, color: "#e5173f", letterSpacing: ".1em", textTransform: "uppercase" }}>{l}</p>
-                  <p style={{ fontSize: 13, color: "rgba(255,255,255,.55)", lineHeight: 1.65 }}>{t}</p>
-                </div>
-              ))}
-              {/* Techs */}
-              <div>
-                <p className="mono font-semibold mb-3" style={{ fontSize: 10, color: "#e5173f", letterSpacing: ".1em", textTransform: "uppercase" }}>Tecnologias</p>
-                <div className="flex flex-wrap gap-2">
-                  {c.techs.map((t) => (
-                    <span key={t} className="tag">{t}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-        {/* Actions */}
-        <div className="flex flex-wrap gap-3 mt-6">
-          <button onClick={() => setExpanded(!expanded)} className="btn-outline"
-            style={{ fontSize: 12, padding: "10px 18px" }}>
-            {expanded ? "Ocultar Estudo de Caso" : "Ver Estudo de Caso"}
-            <Eye size={13} />
-          </button>
-          {c.img && (
-            <button className="btn-primary" style={{ fontSize: 12, padding: "10px 18px" }}>
-              Acessar Projeto <ArrowUpRight size={13} />
-            </button>
-          )}
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
-function Cases() {
-  return (
-    <section id="cases" className="section">
-      <div className="container">
-        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} transition={{ duration: .7 }}
-          className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6" style={{ marginBottom: 64 }}>
-          <div>
-            <div className="label mb-5">Estudos de Caso</div>
-            <h2 className="h2">Projetos que provam<br /><span className="red">a nossa capacidade.</span></h2>
-          </div>
-          <p className="muted" style={{ fontSize: 15, maxWidth: 360, lineHeight: 1.65 }}>
-            Cada projeto é apresentado com contexto, desafio, solução e resultado — não apenas como um card de portfólio.
-          </p>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-6">
-          {cases.map((c, i) => <CaseCard key={c.title} c={c} i={i} />)}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 // ─── About ────────────────────────────────────────────────────────────────────
 
