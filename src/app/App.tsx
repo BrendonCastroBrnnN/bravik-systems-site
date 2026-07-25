@@ -16,10 +16,12 @@ import { About } from "./components/sections/About";
 import { Cases } from "./components/sections/Cases";
 import { Hero } from "./components/sections/Hero";
 import { Manifesto } from "./components/sections/Manifesto";
+import { Principles } from "./components/sections/Principles";
 import { ValueProp } from "./components/sections/ValueProp";
 import { Problems } from "./components/sections/Problems";
 import { Process } from "./components/sections/Process";
 import { Products } from "./components/sections/Products";
+import { Segments } from "./components/sections/Segments";
 import { Solutions } from "./components/sections/Solutions";
 import { Tech } from "./components/sections/Tech";
 import { faqs } from "./data/faqs";
@@ -176,118 +178,7 @@ const G = `
 
 // ─── Principles ──────────────────────────────────────────────────────────────
 
-function Principles() {
-  const principles = [
-    {
-      icon: Brain,
-      title: "Diagnóstico antes de proposta",
-      desc: "Nenhuma solução é proposta sem antes entender como o processo funciona hoje, onde estão os gargalos e qual é o impacto real do problema para o negócio.",
-    },
-    {
-      icon: Code2,
-      title: "Código como ferramenta, não produto final",
-      desc: "Desenvolvimento de software é o meio que utilizamos. O objetivo é sempre o resultado operacional — maior controle, menos retrabalho, mais clareza para quem decide.",
-    },
-    {
-      icon: Shield,
-      title: "Arquitetura pensada para durar",
-      desc: "Construímos com estrutura limpa e escalável desde o início — para que a solução possa crescer junto com a empresa sem exigir refatorações custosas no futuro.",
-    },
-    {
-      icon: Clock,
-      title: "Transparência em cada fase",
-      desc: "Escopo definido, cronograma comunicado, entregas parciais e nenhuma surpresa. O cliente acompanha o progresso em cada etapa do desenvolvimento.",
-    },
-    {
-      icon: Activity,
-      title: "Presença depois da entrega",
-      desc: "O projeto não termina no go-live. Acompanhamos a operação, corrigimos o que precisa ser ajustado e evoluímos a solução conforme o negócio cresce.",
-    },
-    {
-      icon: Target,
-      title: "Soluções adequadas ao momento",
-      desc: "Recomendamos o que faz sentido para a realidade atual do cliente — sem vender complexidade desnecessária nem subestimar o que o processo realmente exige.",
-    },
-  ];
-
-  return (
-    <section style={{ padding: "80px 0", position: "relative", overflow: "hidden",
-      background: "radial-gradient(ellipse 70% 100% at 50% 50%, rgba(229,23,63,.04) 0%, transparent 70%)" }}>
-      <div className="container">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} transition={{ duration: .7 }}
-          className="text-center" style={{ marginBottom: 56 }}>
-          <div className="label mb-4">Princípios de Trabalho</div>
-          <h2 style={{ fontSize: "clamp(26px,3.5vw,40px)", fontWeight: 800, fontFamily: "'Bricolage Grotesque',sans-serif", letterSpacing: "-.025em" }}>
-            Como a Bravik <span className="red">pensa e trabalha</span>
-          </h2>
-        </motion.div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {principles.map(({ icon: Icon, title, desc }, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * .07, duration: .6 }}
-              className="card p-6">
-              <div className="rounded-xl flex items-center justify-center mb-4"
-                style={{ width: 38, height: 38, background: "rgba(229,23,63,.1)", border: "1px solid rgba(229,23,63,.12)" }}>
-                <Icon size={16} color="#e5173f" />
-              </div>
-              <h3 style={{ fontSize: 14, fontWeight: 700, marginBottom: 8, fontFamily: "'Bricolage Grotesque',sans-serif" }}>{title}</h3>
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,.42)", lineHeight: 1.65 }}>{desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // ─── Segments ─────────────────────────────────────────────────────────────────
-
-function Segments() {
-  const segments = [
-    { icon: Server,          label: "Indústria",              desc: "Controle de produção, pedidos e processos operacionais" },
-    { icon: Globe,           label: "Comércio e Varejo",      desc: "Gestão de estoque, vendas e presença digital" },
-    { icon: Workflow,        label: "Prestadores de Serviço", desc: "Automação de fluxos, CRM e controle de contratos" },
-    { icon: Layers,          label: "Empresas em Crescimento", desc: "Sistemas escaláveis que acompanham a operação" },
-    { icon: MonitorSmartphone, label: "Negócios sem Presença Digital", desc: "Plataformas web que estabelecem credibilidade" },
-    { icon: Brain,           label: "Operações com Alto Volume Manual", desc: "Automações que eliminam tarefas repetitivas" },
-  ];
-
-  return (
-    <section className="section" style={{ background: "rgba(255,255,255,.015)" }}>
-      <div className="container">
-        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} transition={{ duration: .7 }}
-          className="text-center" style={{ marginBottom: 56 }}>
-          <div className="label mb-5">Segmentos</div>
-          <h2 className="h2">Para quem a Bravik<br /><span className="red">desenvolve soluções</span></h2>
-          <p className="muted" style={{ fontSize: 16, maxWidth: 500, margin: "16px auto 0" }}>
-            Atendemos empresas que têm desafios operacionais reais e buscam tecnologia como ferramenta de solução, não de status.
-          </p>
-        </motion.div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {segments.map(({ icon: Icon, label, desc }, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * .07, duration: .6 }}
-              className="card p-5 flex items-start gap-4">
-              <div className="rounded-xl flex items-center justify-center flex-shrink-0"
-                style={{ width: 38, height: 38, background: "rgba(229,23,63,.1)", border: "1px solid rgba(229,23,63,.12)", marginTop: 2 }}>
-                <Icon size={16} color="#e5173f" />
-              </div>
-              <div>
-                <h3 style={{ fontSize: 14, fontWeight: 700, marginBottom: 4, fontFamily: "'Bricolage Grotesque',sans-serif" }}>{label}</h3>
-                <p style={{ fontSize: 12, color: "rgba(255,255,255,.4)", lineHeight: 1.55 }}>{desc}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 // ─── FAQ ──────────────────────────────────────────────────────────────────────
 
