@@ -18,11 +18,11 @@ import { Hero } from "./components/sections/Hero";
 import { Manifesto } from "./components/sections/Manifesto";
 import { ValueProp } from "./components/sections/ValueProp";
 import { Problems } from "./components/sections/Problems";
+import { Process } from "./components/sections/Process";
 import { Products } from "./components/sections/Products";
 import { Solutions } from "./components/sections/Solutions";
+import { Tech } from "./components/sections/Tech";
 import { faqs } from "./data/faqs";
-import { processSteps } from "./data/process";
-import { techs } from "./data/techs";
 
 
 // ─── Global Styles ────────────────────────────────────────────────────────────
@@ -172,70 +172,7 @@ const G = `
 
 // ─── Process ──────────────────────────────────────────────────────────────────
 
-function Process() {
-  return (
-    <section id="processo" className="section">
-      <div className="container">
-        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} transition={{ duration: .7 }}
-          className="text-center" style={{ marginBottom: 64 }}>
-          <div className="label mb-5">Processo</div>
-          <h2 className="h2 mb-4">Processo estruturado.<br /><span className="red">Entrega previsível.</span></h2>
-          <p className="muted" style={{ fontSize: 17, maxWidth: 480, margin: "0 auto" }}>
-            Da primeira conversa ao suporte contínuo — cada fase tem propósito, entregáveis claros e transparência total.
-          </p>
-        </motion.div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {processSteps.map(({ n, title, desc }, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * .06, duration: .6 }}
-              className="card p-6">
-              <p className="mono font-black" style={{ fontSize: 40, lineHeight: 1, marginBottom: 16,
-                color: "rgba(229,23,63,.18)", fontFamily: "'Bricolage Grotesque',sans-serif" }}>
-                {n}
-              </p>
-              <h3 style={{ fontWeight: 700, marginBottom: 8, fontFamily: "'Bricolage Grotesque',sans-serif" }}>{title}</h3>
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,.4)", lineHeight: 1.65 }}>{desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // ─── Tech ─────────────────────────────────────────────────────────────────────
-
-function Tech() {
-  return (
-    <section style={{ borderTop: "1px solid rgba(255,255,255,.055)", borderBottom: "1px solid rgba(255,255,255,.055)", padding: "72px 0" }}>
-      <div className="container">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} transition={{ duration: .7 }}
-          className="text-center" style={{ marginBottom: 48 }}>
-          <div className="label mb-4">Stack</div>
-          <h2 style={{ fontSize: 28, fontWeight: 800, fontFamily: "'Bricolage Grotesque',sans-serif" }}>
-            Tecnologias modernas e <span className="red">comprovadas</span>
-          </h2>
-        </motion.div>
-        <div className="flex flex-wrap justify-center gap-3">
-          {techs.map(({ name, color }, i) => (
-            <motion.div key={name}
-              initial={{ opacity: 0, scale: .92 }} whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }} transition={{ delay: i * .04, duration: .4 }}
-              className="card flex items-center gap-2.5 px-4 py-2.5"
-              style={{ cursor: "default", borderRadius: 12 }}>
-              <div className="rounded-full flex-shrink-0" style={{ width: 7, height: 7, background: color }} />
-              <span className="mono font-medium" style={{ fontSize: 12, color: "rgba(255,255,255,.6)" }}>{name}</span>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 // ─── Principles ──────────────────────────────────────────────────────────────
 
