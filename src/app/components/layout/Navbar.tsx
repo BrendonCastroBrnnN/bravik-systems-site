@@ -2,29 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { COMPANY } from "../../constants/company";
 import { CONTACT } from "../../constants/contact";
-
-const navigationLinks = [
-  {
-    label: "Soluções",
-    href: "#solucoes",
-  },
-  {
-    label: "Produtos",
-    href: "#produtos",
-  },
-  {
-    label: "Cases",
-    href: "#cases",
-  },
-  {
-    label: "Sobre",
-    href: "#sobre",
-  },
-  {
-    label: "Processo",
-    href: "#processo",
-  },
-];
+import { navigationLinks } from "../../data/navigation";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);

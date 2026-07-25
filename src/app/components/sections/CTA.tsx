@@ -1,35 +1,13 @@
 import { motion } from "motion/react";
 import {
   ArrowRight,
-  CheckCircle2,
-  Clock,
-  Lock,
   Mail,
   Rocket,
-  Shield,
 } from "lucide-react";
 
 import { COMPANY } from "../../constants/company";
 import { CONTACT } from "../../constants/contact";
-
-const trustSignals = [
-  {
-    icon: Shield,
-    text: "Contrato transparente",
-  },
-  {
-    icon: Clock,
-    text: "Prazo cumprido",
-  },
-  {
-    icon: CheckCircle2,
-    text: "Suporte pós-entrega",
-  },
-  {
-    icon: Lock,
-    text: "Código seguro e escalável",
-  },
-];
+import { trustSignals } from "../../data/trustSignals";
 
 export function CTA() {
   return (
