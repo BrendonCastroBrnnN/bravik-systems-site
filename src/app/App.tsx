@@ -10,10 +10,10 @@ import {
   ChevronDown, GitMerge, RefreshCw,
   ChevronRight, Boxes, Eye
 } from "lucide-react";
-import * as Accordion from "@radix-ui/react-accordion";
 import { Navbar } from "./components/layout/Navbar";
 import { About } from "./components/sections/About";
 import { Cases } from "./components/sections/Cases";
+import { FAQ } from "./components/sections/FAQ";
 import { Hero } from "./components/sections/Hero";
 import { Manifesto } from "./components/sections/Manifesto";
 import { Principles } from "./components/sections/Principles";
@@ -24,7 +24,6 @@ import { Products } from "./components/sections/Products";
 import { Segments } from "./components/sections/Segments";
 import { Solutions } from "./components/sections/Solutions";
 import { Tech } from "./components/sections/Tech";
-import { faqs } from "./data/faqs";
 
 
 // ─── Global Styles ────────────────────────────────────────────────────────────
@@ -181,48 +180,6 @@ const G = `
 // ─── Segments ─────────────────────────────────────────────────────────────────
 
 // ─── FAQ ──────────────────────────────────────────────────────────────────────
-
-function FAQ() {
-  return (
-    <section id="faq" className="section">
-      <div className="container" style={{ maxWidth: 860 }}>
-        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} transition={{ duration: .7 }}
-          className="text-center" style={{ marginBottom: 56 }}>
-          <div className="label mb-5">FAQ</div>
-          <h2 className="h2">Perguntas <span className="red">frequentes</span></h2>
-        </motion.div>
-
-        <Accordion.Root type="single" collapsible style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          {faqs.map(({ q, a }, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * .07, duration: .5 }}>
-              <Accordion.Item value={`faq-${i}`} className="card overflow-hidden"
-                style={{ borderRadius: 14 }}>
-                <Accordion.Trigger style={{
-                  width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between",
-                  gap: 16, padding: "20px 24px", textAlign: "left", fontSize: 14, fontWeight: 600,
-                  color: "#f5f5f5", background: "none", border: "none", cursor: "pointer",
-                  fontFamily: "'DM Sans',sans-serif", transition: "color .2s ease",
-                }}>
-                  <span>{q}</span>
-                  <ChevronDown size={15} color="rgba(255,255,255,.3)"
-                    style={{ flexShrink: 0, transition: "transform .2s ease" }} />
-                </Accordion.Trigger>
-                <Accordion.Content>
-                  <div style={{ padding: "0 24px 20px", borderTop: "1px solid rgba(255,255,255,.055)", paddingTop: 16 }}>
-                    <p style={{ fontSize: 13, color: "rgba(255,255,255,.5)", lineHeight: 1.7 }}>{a}</p>
-                  </div>
-                </Accordion.Content>
-              </Accordion.Item>
-            </motion.div>
-          ))}
-        </Accordion.Root>
-      </div>
-    </section>
-  );
-}
 
 // ─── CTA ──────────────────────────────────────────────────────────────────────
 
