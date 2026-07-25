@@ -1,14 +1,3 @@
-import { useState, useEffect } from "react";
-import {
-  ArrowRight, Menu, X, AlertTriangle,
-  CheckCircle2, Shield, Globe, BarChart3,
-  Brain, Code2, TrendingUp, Clock, Instagram,
-  Linkedin, Github, Mail, Database, Server, Lock,
-  Layers, Sparkles, FileCode, Workflow, MonitorSmartphone,
-  Phone, ArrowUpRight, Activity, Target, Rocket, Package,
-  ChevronDown, GitMerge, RefreshCw,
-  ChevronRight, Boxes, Eye
-} from "lucide-react";
 import { Footer } from "./components/layout/Footer";
 import { Navbar } from "./components/layout/Navbar";
 import { About } from "./components/sections/About";
@@ -18,13 +7,13 @@ import { FAQ } from "./components/sections/FAQ";
 import { Hero } from "./components/sections/Hero";
 import { Manifesto } from "./components/sections/Manifesto";
 import { Principles } from "./components/sections/Principles";
-import { ValueProp } from "./components/sections/ValueProp";
 import { Problems } from "./components/sections/Problems";
 import { Process } from "./components/sections/Process";
 import { Products } from "./components/sections/Products";
 import { Segments } from "./components/sections/Segments";
 import { Solutions } from "./components/sections/Solutions";
 import { Tech } from "./components/sections/Tech";
+import { ValueProp } from "./components/sections/ValueProp";
 
 
 // ─── Global Styles ────────────────────────────────────────────────────────────
