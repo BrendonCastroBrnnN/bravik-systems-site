@@ -13,6 +13,12 @@ import {
 import * as Accordion from "@radix-ui/react-accordion";
 import { products } from "./data/products";
 import { cases } from "./data/cases";
+import { problems } from "./data/problems";
+import { services } from "./data/services";
+import { processSteps } from "./data/process";
+import { techs } from "./data/techs";
+import { faqs } from "./data/faqs";
+
 
 // ─── Global Styles ────────────────────────────────────────────────────────────
 
@@ -138,60 +144,6 @@ const G = `
 `;
 
 // ─── Data ────────────────────────────────────────────────────────────────────
-
-const problems = [
-  { icon: FileCode,      prob: "Controle em planilhas",            sol: "ERP sob medida com dados em tempo real, acesso multi-usuário e automação de entradas",             tag: "ERP" },
-  { icon: RefreshCw,     prob: "Processos 100% manuais",           sol: "Automações inteligentes com gatilhos, regras e fluxos que operam sem intervenção humana",          tag: "Automação" },
-  { icon: AlertTriangle, prob: "Retrabalho e erros operacionais",  sol: "Validações, workflows e integrações que eliminam erros na origem, antes que se propaguem",          tag: "Workflow" },
-  { icon: GitMerge,      prob: "Sistemas isolados e desconectados", sol: "APIs e integrações que unificam todos os sistemas em um único ecossistema de dados",               tag: "APIs" },
-  { icon: TrendingUp,    prob: "Tomada de decisão no escuro",      sol: "Dashboards com KPIs em tempo real que transformam dados em decisões estratégicas",                  tag: "BI" },
-  { icon: Globe,         prob: "Presença digital fraca",           sol: "Plataformas web de alto padrão que transmitem autoridade e convertem visitantes em clientes",        tag: "Web" },
-  { icon: Layers,        prob: "Falta de organização operacional", sol: "ERP personalizado para o modelo de negócio da empresa — não adaptações de software pronto",          tag: "ERP" },
-  { icon: Server,        prob: "Sistemas legados e instáveis",     sol: "Modernização com arquitetura escalável, segura e preparada para crescimento acelerado",              tag: "Dev" },
-];
-
-const services = [
-  { icon: Code2,           title: "Sistemas Sob Medida",         benefit: "Processos otimizados para sua realidade",          desc: "Plataformas desenvolvidas especificamente para o seu negócio — sem adaptações ou limitações de softwares prontos." },
-  { icon: Globe,           title: "Websites Institucionais",      benefit: "Credibilidade que converte visitantes",             desc: "Presença digital de alto padrão que transmite autoridade e gera oportunidades reais de negócio." },
-  { icon: MonitorSmartphone, title: "Portais Corporativos",       benefit: "Central de informações para toda a operação",      desc: "Ambientes digitais completos para gestão de conteúdo, parceiros, colaboradores e clientes." },
-  { icon: Package,         title: "ERP & CRM",                   benefit: "Visibilidade total sobre vendas e operações",       desc: "Sistemas de gestão e relacionamento desenvolvidos para as necessidades reais da sua empresa." },
-  { icon: BarChart3,       title: "Dashboards & BI",             benefit: "Decisões baseadas em dados, não intuição",          desc: "Visualização de dados em tempo real que transforma números em ações estratégicas." },
-  { icon: GitMerge,        title: "Integrações & APIs",          benefit: "Um ecossistema que trabalha em sincronia",          desc: "Conectamos sistemas distintos, eliminando silos de informação e duplicidade de processos." },
-  { icon: Workflow,        title: "Automações Inteligentes",     benefit: "Horas de trabalho manual → produtividade",         desc: "Fluxos automatizados que executam tarefas repetitivas e liberam equipe para o que importa." },
-  { icon: Brain,           title: "Inteligência Artificial",     benefit: "Tecnologia aplicada a problemas reais de processo",  desc: "IA integrada a fluxos operacionais: análise de dados, geração de conteúdo estruturado e automação cognitiva de tarefas." },
-  { icon: Sparkles,        title: "Consultoria Tecnológica",     benefit: "Clareza sobre o que usar e quando",                 desc: "Diagnóstico, planejamento e roadmap tecnológico para empresas que querem estruturar ou evoluir sua operação digital." },
-];
-
-const processSteps = [
-  { n: "01", title: "Diagnóstico",        desc: "Mergulhamos no negócio para entender processos, gargalos e oportunidades antes de propor qualquer solução tecnológica." },
-  { n: "02", title: "Planejamento",       desc: "Definimos escopo, entregas, tecnologias e cronograma com total transparência — sem surpresas durante o desenvolvimento." },
-  { n: "03", title: "Arquitetura",        desc: "Projetamos a estrutura técnica com foco em escalabilidade, segurança e manutenibilidade de longo prazo." },
-  { n: "04", title: "UX / UI",           desc: "Desenhamos interfaces que tornam a tecnologia simples, intuitiva e agradável de usar — independente do perfil do usuário." },
-  { n: "05", title: "Desenvolvimento",   desc: "Codificamos com qualidade, testes contínuos e revisões frequentes para garantir confiabilidade em produção." },
-  { n: "06", title: "Testes",            desc: "Validamos cada funcionalidade em diferentes cenários e dispositivos antes de qualquer implantação." },
-  { n: "07", title: "Implantação",       desc: "Lançamos com acompanhamento próximo na fase de go-live para garantir estabilidade desde o primeiro minuto." },
-  { n: "08", title: "Suporte",           desc: "Permanecemos presentes após a entrega para ajustes, melhorias e evolução contínua da solução." },
-  { n: "09", title: "Melhoria Contínua", desc: "Monitoramos resultados e evoluímos a solução junto com o crescimento da empresa — sem fim de contrato real." },
-];
-
-const techs = [
-  { name: "React",       color: "#61DAFB" }, { name: "TypeScript", color: "#3178C6" },
-  { name: "Node.js",     color: "#8CC84B" }, { name: "Tailwind CSS", color: "#38BDF8" },
-  { name: "Supabase",    color: "#3ECF8E" }, { name: "PostgreSQL",  color: "#4169E1" },
-  { name: "Docker",      color: "#2496ED" }, { name: "Git",         color: "#F05032" },
-  { name: "GitHub",      color: "#f5f5f5" }, { name: "Google APIs", color: "#EA4335" },
-  { name: "OpenAI",      color: "#74AA9C" }, { name: "REST APIs",   color: "#FF6C37" },
-  { name: "Figma",       color: "#F24E1E" },
-];
-
-const faqs = [
-  { q: "Quanto tempo leva para desenvolver um sistema?",         a: "Depende do escopo. Websites de alto nível são entregues em 2 a 4 semanas. Sistemas completos (ERPs, plataformas customizadas) variam de 2 a 6 meses. Após o diagnóstico, apresentamos um cronograma detalhado com marcos de entrega e revisões intermediárias." },
-  { q: "Qual é o investimento necessário para contratar?",       a: "O valor é definido após o diagnóstico e planejamento — sempre com uma proposta transparente, detalhada e sem surpresas. Trabalhamos com escopo fechado para projetos definidos e modelo de manutenção contínua para evoluções após a entrega." },
-  { q: "Vocês oferecem suporte técnico após a entrega?",         a: "Sim. O suporte pós-entrega faz parte do nosso processo padrão. Acompanhamos a fase de go-live e mantemos contrato de suporte para estabilidade, ajustes e evolução contínua da solução conforme o crescimento da empresa." },
-  { q: "É possível integrar com sistemas que já temos?",         a: "Sim. Desenvolvemos integrações entre sistemas via APIs REST, webhooks e conexões diretas a bancos de dados. Avaliamos cada integração durante o diagnóstico para identificar a melhor abordagem técnica e o impacto no custo do projeto." },
-  { q: "Que tipo de empresa a Bravik Systems atende?",           a: "Atendemos principalmente empresas de médio porte, indústrias, prestadores de serviço, startups em crescimento e negócios que querem modernizar seus processos. O pré-requisito é ter um desafio real a resolver — não apenas uma demanda por software." },
-  { q: "Como é o processo de desenvolvimento na prática?",       a: "Seguimos 9 etapas: Diagnóstico → Planejamento → Arquitetura → UX/UI → Desenvolvimento → Testes → Implantação → Suporte → Melhoria Contínua. Cada fase tem entregáveis claros e o cliente acompanha o progresso de perto durante todo o processo." },
-];
 
 // ─── Hero Composition ─────────────────────────────────────────────────────────
 
