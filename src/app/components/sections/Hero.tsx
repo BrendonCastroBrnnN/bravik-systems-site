@@ -1,12 +1,29 @@
 import { motion } from "motion/react";
 import {
+  Activity,
   ArrowRight,
+  Code2,
   Phone,
+  Target,
 } from "lucide-react";
 
 import { CONTACT } from "../../constants/contact";
-import { heroBenefits } from "../../data/heroBenefits";
 import { HeroViz } from "./HeroViz";
+
+const heroBenefits = [
+  {
+    icon: Target,
+    text: "Diagnóstico do processo antes de qualquer proposta",
+  },
+  {
+    icon: Code2,
+    text: "Desenvolvimento com arquitetura limpa e escalável",
+  },
+  {
+    icon: Activity,
+    text: "Comprometimento com resultado, não apenas com entrega",
+  },
+];
 
 export function Hero() {
   return (
