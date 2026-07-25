@@ -31,6 +31,7 @@ export function CaseCard({
     solution,
     impact,
     techs,
+    projectUrl,
   } = caseStudy;
 
   const details = [
@@ -52,7 +53,8 @@ export function CaseCard({
     },
   ];
 
-  const isCompleted = status === "Concluído";
+  const isCompleted =
+    status === "Entregue" || status === "Em Operação";
 
   return (
     <motion.div
@@ -83,7 +85,8 @@ export function CaseCard({
         {img ? (
           <img
             src={img}
-            alt={title}
+            alt={`Imagem do projeto ${title}`}
+            loading="lazy"
             style={{
               width: "100%",
               height: "100%",
@@ -317,18 +320,21 @@ export function CaseCard({
             <Eye size={13} />
           </button>
 
-          {img && (
-            <button
-              type="button"
+          {projectUrl && (
+            <a
+              href={projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary"
               style={{
                 fontSize: 12,
                 padding: "10px 18px",
               }}
+              aria-label={`Acessar projeto ${title}`}
             >
               Acessar Projeto
               <ArrowUpRight size={13} />
-            </button>
+            </a>
           )}
         </div>
       </div>

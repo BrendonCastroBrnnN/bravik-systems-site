@@ -1,6 +1,12 @@
+export type CaseStatus =
+  | "Entregue"
+  | "Em Desenvolvimento"
+  | "Em Operação"
+  | "Em Planejamento";
+
 export interface CaseStudy {
   tag: string;
-  status: string;
+  status: CaseStatus;
   title: string;
   headline: string;
   context: string;
@@ -10,6 +16,7 @@ export interface CaseStudy {
   techs: string[];
   highlights: string[];
   img?: string;
+  projectUrl?: string;
 }
 
 export const cases: CaseStudy[] = [
@@ -33,6 +40,7 @@ export const cases: CaseStudy[] = [
       "SEO técnico desde a fundação",
     ],
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=500&fit=crop&auto=format",
+    projectUrl: "https://site-grupo-clemal.vercel.app",
   },
   {
     tag: "Automotivo",
