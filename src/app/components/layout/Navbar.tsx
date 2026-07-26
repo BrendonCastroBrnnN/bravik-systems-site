@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
-import { COMPANY } from "../../constants/company";
 import { CONTACT } from "../../constants/contact";
 import { navigationLinks } from "../../data/navigation";
 
@@ -48,45 +47,16 @@ export function Navbar() {
           style={{ textDecoration: "none" }}
           aria-label="Voltar ao início"
         >
-          <div
-            className="rounded-xl flex items-center justify-center flex-shrink-0"
+          <img
+            src="/BravikSystemsBGBR.png"
+            alt="Bravik Systems"
             style={{
-              width: 32,
-              height: 32,
-              background: "#e5173f",
+              width: "auto",
+              height: 55,
+              display: "block",
+              objectFit: "contain",
             }}
-          >
-            <span
-              className="mono font-bold text-white"
-              style={{ fontSize: 13 }}
-            >
-              B
-            </span>
-          </div>
-
-          <div className="flex flex-col leading-none">
-            <span
-              className="font-bold text-white tracking-tight"
-              style={{
-                fontSize: 13,
-                fontFamily: "'Bricolage Grotesque',sans-serif",
-              }}
-            >
-              {COMPANY.shortName.toUpperCase()}
-            </span>
-
-            <span
-              className="mono"
-              style={{
-                fontSize: 8,
-                letterSpacing: ".18em",
-                color: "rgba(255,255,255,.3)",
-                textTransform: "uppercase",
-              }}
-            >
-              {COMPANY.name.replace(`${COMPANY.shortName} `, "")}
-            </span>
-          </div>
+          />
         </a>
 
         <nav

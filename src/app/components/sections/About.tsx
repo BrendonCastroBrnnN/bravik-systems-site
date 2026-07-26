@@ -2,28 +2,22 @@ import { motion } from "motion/react";
 
 const timeline = [
   {
-    year: "2022",
-    title: "Fundação",
-    description:
-      "A Bravik Systems nasce da união entre experiência prática em gestão empresarial, processos produtivos e desenvolvimento de software.",
-  },
-  {
-    year: "2023",
-    title: "Primeiros Projetos",
-    description:
-      "Entrega dos primeiros sistemas e websites para clientes nos setores industrial, automotivo e comercial.",
-  },
-  {
-    year: "2024",
-    title: "Expansão e Produtos",
-    description:
-      "Desenvolvimento do Bravik ERP, ML Automation System e crescimento expressivo da base de clientes.",
-  },
-  {
     year: "2025",
-    title: "Inovação com IA",
+    title: "Fundação da Bravik Systems",
     description:
-      "Início do Bravik AI Quotes e consolidação como parceira estratégica de tecnologia para médias empresas.",
+      "Início da empresa com foco no desenvolvimento de soluções digitais para negócios, unindo experiência prática em gestão e tecnologia.",
+  },
+  {
+    year: "2026",
+    title: "Primeiros Produtos Próprios",
+    description:
+      "Desenvolvimento do Bravik ERP, ML Automation System e evolução do portfólio de sites, sistemas e automações.",
+  },
+  {
+    year: "Hoje",
+    title: "Em constante evolução",
+    description:
+      "Construindo soluções digitais que simplificam processos e geram valor para empresas de diferentes segmentos.",
   },
 ];
 

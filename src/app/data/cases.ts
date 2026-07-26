@@ -4,8 +4,13 @@ export type CaseStatus =
   | "Em Operação"
   | "Em Planejamento";
 
+export type CaseType =
+  | "Projeto para Cliente"
+  | "Solução Proprietária";
+
 export interface CaseStudy {
   tag: string;
+  type: CaseType;
   status: CaseStatus;
   title: string;
   headline: string;
@@ -22,6 +27,7 @@ export interface CaseStudy {
 export const cases: CaseStudy[] = [
   {
     tag: "Indústria",
+    type: "Projeto para Cliente",
     status: "Entregue",
     title: "Grupo Clemal",
     headline: "Website institucional para empresa do setor industrial.",
@@ -44,6 +50,7 @@ export const cases: CaseStudy[] = [
   },
   {
     tag: "Automotivo",
+    type: "Projeto para Cliente",
     status: "Entregue",
     title: "Auto Onze",
     headline: "Website institucional com foco em presença local e contato direto.",
@@ -65,6 +72,7 @@ export const cases: CaseStudy[] = [
   },
   {
     tag: "Construção",
+    type: "Projeto para Cliente",
     status: "Entregue",
     title: "Big Lajes",
     headline: "Website empresarial para apresentação de produtos e captação de orçamentos.",
@@ -86,6 +94,7 @@ export const cases: CaseStudy[] = [
   },
   {
     tag: "Sistema Interno",
+    type: "Solução Proprietária",
     status: "Em Desenvolvimento",
     title: "Bravik ERP",
     headline: "Sistema de gestão de processos produtivos em desenvolvimento pela Bravik.",
@@ -114,6 +123,7 @@ export const cases: CaseStudy[] = [
   },
   {
     tag: "Automação",
+    type: "Solução Proprietária",
     status: "Em Operação",
     title: "ML Automation System",
     headline:
@@ -141,6 +151,7 @@ export const cases: CaseStudy[] = [
   },
   {
     tag: "IA · Em Planejamento",
+    type: "Solução Proprietária",
     status: "Em Planejamento",
     title: "Bravik AI Quotes",
     headline:

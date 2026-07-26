@@ -87,53 +87,20 @@ export function Footer() {
         >
           <div className="lg:col-span-2">
             <div
-              className="flex items-center gap-2.5"
               style={{
                 marginBottom: 20,
               }}
             >
-              <div
-                className="rounded-xl flex items-center justify-center flex-shrink-0"
+              <img
+                src="/BravikSystemsBGBR.png"
+                alt="Bravik Systems"
                 style={{
-                  width: 36,
-                  height: 36,
-                  background: "#e5173f",
+                  width: "auto",
+                  height: 80,
+                  display: "block",
+                  objectFit: "contain",
                 }}
-              >
-                <span
-                  className="mono font-bold text-white"
-                  style={{
-                    fontSize: 14,
-                  }}
-                >
-                  B
-                </span>
-              </div>
-
-              <div className="flex flex-col leading-none">
-                <span
-                  style={{
-                    fontWeight: 800,
-                    fontFamily:
-                      "'Bricolage Grotesque',sans-serif",
-                    fontSize: 15,
-                  }}
-                >
-                  {COMPANY.name.toUpperCase()}
-                </span>
-
-                <span
-                  className="mono"
-                  style={{
-                    fontSize: 9,
-                    color: "rgba(255,255,255,.3)",
-                    letterSpacing: ".18em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  {COMPANY.slogan}
-                </span>
-              </div>
+              />
             </div>
 
             <p

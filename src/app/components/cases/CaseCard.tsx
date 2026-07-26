@@ -23,6 +23,7 @@ export function CaseCard({
     img,
     title,
     tag,
+    type,
     status,
     headline,
     highlights,
@@ -55,6 +56,9 @@ export function CaseCard({
 
   const isCompleted =
     status === "Entregue" || status === "Em Operação";
+
+  const isProprietary =
+    type === "Solução Proprietária";
 
   return (
     <motion.div
@@ -158,11 +162,10 @@ export function CaseCard({
               color: isCompleted
                 ? "#34D399"
                 : "#818CF8",
-              border: `1px solid ${
-                isCompleted
-                  ? "rgba(52,211,153,.25)"
-                  : "rgba(129,140,248,.25)"
-              }`,
+              border: `1px solid ${isCompleted
+                ? "rgba(52,211,153,.25)"
+                : "rgba(129,140,248,.25)"
+                }`,
             }}
           >
             {status}
@@ -189,11 +192,47 @@ export function CaseCard({
             fontSize: 14,
             color: "rgba(255,255,255,.5)",
             lineHeight: 1.6,
-            marginBottom: 20,
+            marginBottom: 14,
           }}
         >
           {headline}
         </p>
+
+        <div
+          style={{
+            marginBottom: 20,
+          }}
+        >
+          <span
+            className="mono font-semibold px-3 py-1.5 rounded-full inline-flex items-center gap-2"
+            style={{
+              fontSize: 10,
+              background: isProprietary
+                ? "rgba(229,23,63,.1)"
+                : "rgba(52,211,153,.08)",
+              color: isProprietary
+                ? "#e5173f"
+                : "#34D399",
+              border: `1px solid ${isProprietary
+                ? "rgba(229,23,63,.22)"
+                : "rgba(52,211,153,.2)"
+                }`,
+            }}
+          >
+            <span
+              className="rounded-full"
+              style={{
+                width: 5,
+                height: 5,
+                background: isProprietary
+                  ? "#e5173f"
+                  : "#34D399",
+              }}
+            />
+
+            {type}
+          </span>
+        </div>
 
         <div className="flex flex-col gap-2 mb-6">
           {highlights.map((highlight) => (
