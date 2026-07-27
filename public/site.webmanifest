@@ -1,0 +1,19 @@
+﻿{
+  "name": "Bravik Systems",
+  "short_name": "Bravik",
+  "description": "Sites profissionais, sistemas personalizados, automações e soluções com inteligência artificial para empresas.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#070707",
+  "theme_color": "#070707",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
