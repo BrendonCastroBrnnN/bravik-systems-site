@@ -1,5 +1,5 @@
 export const CONTACT = {
-  email: "brendon.guilherme@hotmail.com",
+  email: "brendon@braviksystems.com.br",
   phone: "(31) 99926-9764",
   whatsappUrl: "https://wa.me/5531999269764",
   instagramUrl: "https://www.instagram.com/brendonn__castro/",
