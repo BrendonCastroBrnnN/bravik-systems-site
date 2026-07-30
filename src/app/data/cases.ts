@@ -45,7 +45,7 @@ export const cases: CaseStudy[] = [
       "Identidade digital estruturada",
       "SEO técnico desde a fundação",
     ],
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=500&fit=crop&auto=format",
+    img: "/SiteGrupoClemalPortifolio.png",
     projectUrl: "https://site-grupo-clemal.vercel.app",
   },
   {
