@@ -68,7 +68,8 @@ export const cases: CaseStudy[] = [
       "Integração direta com WhatsApp",
       "Estrutura de SEO local implementada",
     ],
-    img: "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?w=900&h=500&fit=crop&auto=format",
+    img: "/SiteAutoOnzePortifolio.png",
+    projectUrl: "https://autoonze.com.br",
   },
   {
     tag: "Construção",
