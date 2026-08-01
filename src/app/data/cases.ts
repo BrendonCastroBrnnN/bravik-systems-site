@@ -30,20 +30,20 @@ export const cases: CaseStudy[] = [
     type: "Projeto para Cliente",
     status: "Entregue",
     title: "Grupo Clemal",
-    headline: "Website institucional para empresa do setor industrial.",
+    headline: "Plataforma institucional desenvolvida para fortalecer a presença digital e a comunicação B2B.",
     context:
       "Grupo atuante no setor industrial precisava de uma presença digital que comunicasse com clareza a escala das suas operações para parceiros e clientes corporativos.",
     challenge:
       "Ausência de presença digital estruturada dificultava o contato com parceiros e transmitia uma percepção aquém do real porte da empresa.",
     solution:
-      "Desenvolvemos uma plataforma institucional com navegação objetiva, apresentação estruturada das operações e formulário de contato B2B integrado.",
+      "Desenvolvemos um website institucional moderno com foco em credibilidade, apresentação estruturada dos produtos e operações, SEO técnico e canal de contato voltado ao público corporativo.",
     impact:
-      "Entregável: website institucional em produção. Acompanhamento de resultados comerciais fica a cargo do cliente — sem dados reportados até o momento.",
+      "Website institucional publicado com foco em fortalecer a presença digital da empresa, reforçar a credibilidade e facilitar o relacionamento comercial com clientes e parceiros.",
     techs: ["React", "TypeScript", "Tailwind CSS", "Node.js", "SEO"],
     highlights: [
-      "Plataforma institucional entregue e em produção",
-      "Identidade digital estruturada",
-      "SEO técnico desde a fundação",
+      "Website institucional publicado",
+      "Estrutura completa de SEO técnico",
+      "Canal comercial integrado",
     ],
     img: "/SiteGrupoClemalPortifolio.png",
     projectUrl: "https://site-grupo-clemal.vercel.app",
@@ -53,20 +53,20 @@ export const cases: CaseStudy[] = [
     type: "Projeto para Cliente",
     status: "Entregue",
     title: "Auto Onze",
-    headline: "Website institucional com foco em presença local e contato direto.",
+    headline: "Website institucional desenvolvido para ampliar a presença digital e facilitar o contato com novos clientes.",
     context:
       "Negócio automotivo consolidado regionalmente, mas sem nenhuma presença online estruturada para quem buscasse os serviços em buscadores.",
     challenge:
       "Inexistência de canal digital impedia que clientes locais encontrassem a empresa fora do boca a boca e das indicações presenciais.",
     solution:
-      "Construímos uma plataforma com apresentação dos serviços, integração direta com WhatsApp e estrutura de SEO local para buscas na região.",
+      "Desenvolvemos um website institucional responsivo com apresentação dos serviços, integração direta com WhatsApp e otimização para buscas locais através de SEO.",
     impact:
-      "Entregável: website em produção com canal de contato ativo. Impacto sobre volume de contatos é acompanhado pelo cliente.",
+      "Website publicado com estrutura de SEO local, canal direto de atendimento via WhatsApp e presença digital estruturada para ampliar a visibilidade da empresa.",
     techs: ["React", "Tailwind CSS", "SEO Local", "WhatsApp API"],
     highlights: [
-      "Website institucional entregue e no ar",
+      "Website publicado em produção",
       "Integração direta com WhatsApp",
-      "Estrutura de SEO local implementada",
+      "SEO Local implementado",
     ],
     img: "/SiteAutoOnzePortifolio.png",
     projectUrl: "https://autoonze.com.br",
@@ -76,18 +76,18 @@ export const cases: CaseStudy[] = [
     type: "Projeto para Cliente",
     status: "Entregue",
     title: "Big Lajes",
-    headline: "Website empresarial para apresentação de produtos e captação de orçamentos.",
+    headline: "Website institucional desenvolvido para apresentar produtos e facilitar a solicitação de orçamentos.",
     context:
       "Empresa do setor de construção com produto consolidado, mas sem canal digital para alcançar compradores fora do seu raio de indicações.",
     challenge:
       "A ausência de presença digital limitava o alcance comercial e dificultava a solicitação de orçamentos por canais distintos das indicações.",
     solution:
-      "Desenvolvemos um site institucional com apresentação técnica dos produtos, formulário de solicitação de orçamento e conteúdo orientado para SEO.",
+      "Desenvolvemos um website institucional responsivo com apresentação técnica dos produtos, formulário de orçamento e estrutura de SEO para ampliar a presença digital da empresa.",
     impact:
-      "Entregável: website em produção com canal de captação de orçamentos ativo. Acompanhamento de resultados é responsabilidade do cliente.",
+      "Website publicado com apresentação profissional dos produtos, canal estruturado para solicitação de orçamentos e presença digital fortalecida.",
     techs: ["React", "TypeScript", "Node.js", "SEO", "Analytics"],
     highlights: [
-      "Website com formulário de orçamento operacional",
+      "Website institucional publicado",
       "Apresentação técnica dos produtos",
       "Estrutura de SEO implementada",
     ],
@@ -98,7 +98,7 @@ export const cases: CaseStudy[] = [
     type: "Solução Proprietária",
     status: "Em Desenvolvimento",
     title: "Bravik ERP",
-    headline: "Sistema de gestão de processos produtivos em desenvolvimento pela Bravik.",
+    headline: "ERP modular para gestão de processos produtivos e administrativos.",
     context:
       "Contexto operacional com controle de pedidos, produção e faturamento distribuído em planilhas — modelo que funciona no início, mas cria gargalos com o crescimento do volume.",
     challenge:
@@ -106,7 +106,7 @@ export const cases: CaseStudy[] = [
     solution:
       "Estamos desenvolvendo o Bravik ERP: sistema modular com Dashboard, Gestão de Clientes, Pedidos, Produção, Relatórios e Orçamentos — integrado em uma única plataforma.",
     impact:
-      "Projeto em desenvolvimento como produto interno. Módulos principais em construção. Ainda sem dados de uso em produção para reportar.",
+      "Produto proprietário em desenvolvimento, projetado para centralizar processos operacionais, aumentar a produtividade e reduzir controles manuais.",
     techs: [
       "React",
       "TypeScript",
@@ -136,7 +136,7 @@ export const cases: CaseStudy[] = [
     solution:
       "Desenvolvemos uma solução que integra com as contas do Mercado Livre via API, captura pedidos automaticamente, calcula valores e taxas, separa por conta e registra no Google Sheets com controle de duplicidades.",
     impact:
-      "Sistema em operação no contexto para o qual foi desenvolvido. Pedidos são registrados automaticamente. O controle operacional manual desta etapa foi eliminado.",
+      "Sistema proprietário em operação que automatiza integralmente o registro dos pedidos do Mercado Livre, eliminando tarefas manuais e aumentando a confiabilidade das informações.",
     techs: [
       "Node.js",
       "Mercado Livre API",
@@ -164,7 +164,7 @@ export const cases: CaseStudy[] = [
     solution:
       "Sistema em planejamento que utilizará IA para apoiar a estruturação de propostas — com análise de escopo, sugestão de itens, templates configuráveis e fluxo de aprovação digital.",
     impact:
-      "Projeto em fase de planejamento. Nenhum resultado a reportar. Disponível como solução futura da Bravik Systems.",
+      "Projeto em fase de planejamento com arquitetura inicial definida para futura integração ao ecossistema Bravik Systems.",
     techs: ["React", "TypeScript", "OpenAI API", "Supabase", "Node.js"],
     highlights: [
       "Conceito validado internamente",
