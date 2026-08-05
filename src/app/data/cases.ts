@@ -174,7 +174,6 @@ export const cases: CaseStudy[] = [
     ],
 
     img: "/MLAplicationSystem.png",
-    projectUrl: "https://biglajesbh.com.br",
   },
   {
     tag: "IA · Em Planejamento",
