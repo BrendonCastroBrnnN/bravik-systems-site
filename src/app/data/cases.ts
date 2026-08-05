@@ -76,21 +76,36 @@ export const cases: CaseStudy[] = [
     type: "Projeto para Cliente",
     status: "Entregue",
     title: "Big Lajes",
-    headline: "Website institucional desenvolvido para apresentar produtos e facilitar a solicitação de orçamentos.",
+    headline:
+      "Website institucional desenvolvido para fortalecer a presença digital e simplificar a solicitação de orçamentos.",
+
     context:
-      "Empresa do setor de construção com produto consolidado, mas sem canal digital para alcançar compradores fora do seu raio de indicações.",
+      "Fabricante de lajes treliçadas com atuação consolidada no setor da construção civil, mas sem uma presença digital estruturada para apresentar seus produtos e captar novos clientes.",
+
     challenge:
-      "A ausência de presença digital limitava o alcance comercial e dificultava a solicitação de orçamentos por canais distintos das indicações.",
+      "A ausência de um website dificultava a divulgação da empresa, limitava a geração de novos contatos e concentrava as solicitações de orçamento em canais informais.",
+
     solution:
-      "Desenvolvemos um website institucional responsivo com apresentação técnica dos produtos, formulário de orçamento e estrutura de SEO para ampliar a presença digital da empresa.",
+      "Desenvolvemos um website institucional responsivo com apresentação técnica dos produtos, galeria de projetos, formulário de orçamento, integração com WhatsApp e estrutura completa de SEO para ampliar a visibilidade da empresa.",
+
     impact:
-      "Website publicado com apresentação profissional dos produtos, canal estruturado para solicitação de orçamentos e presença digital fortalecida.",
-    techs: ["React", "TypeScript", "Node.js", "SEO", "Analytics"],
+      "Website publicado com foco em fortalecer a presença digital da empresa, facilitar a solicitação de orçamentos e oferecer uma apresentação profissional dos produtos e serviços.",
+
+    techs: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "SEO",
+      "Google Analytics",
+    ],
+
     highlights: [
       "Website institucional publicado",
-      "Apresentação técnica dos produtos",
-      "Estrutura de SEO implementada",
+      "Solicitação de orçamento integrada",
+      "SEO técnico implementado",
     ],
+
     img: "/SiteBigLajesPortifolio.png",
     projectUrl: "https://biglajesbh.com.br",
   },
@@ -128,28 +143,38 @@ export const cases: CaseStudy[] = [
     type: "Solução Proprietária",
     status: "Em Operação",
     title: "ML Automation System",
+
     headline:
-      "Automação de pedidos do Mercado Livre com registro automático no Google Sheets.",
+      "Automação de pedidos do Mercado Livre com integração via API e registro automático no Google Sheets.",
+
     context:
-      "Operação específica no Mercado Livre com múltiplas contas ativas exigia controle manual de pedidos, cálculos e registros — processo suscetível a erros e lento.",
+      "Operação com múltiplas contas do Mercado Livre exigia controle manual de pedidos, cálculo de taxas e consolidação de informações em planilhas, tornando o processo lento e sujeito a falhas.",
+
     challenge:
-      "O registro manual de cada pedido, o cálculo de taxas e a separação por conta consumiam tempo operacional diário e geravam inconsistências nos controles.",
+      "Eliminar atividades repetitivas, reduzir erros operacionais e garantir que todos os pedidos fossem registrados automaticamente, sem duplicidades e com informações financeiras consistentes.",
+
     solution:
-      "Desenvolvemos uma solução que integra com as contas do Mercado Livre via API, captura pedidos automaticamente, calcula valores e taxas, separa por conta e registra no Google Sheets com controle de duplicidades.",
+      "Desenvolvemos uma solução integrada à API do Mercado Livre que captura pedidos automaticamente, identifica a conta de origem, calcula valores e taxas, registra os dados no Google Sheets e impede registros duplicados.",
+
     impact:
-      "Sistema proprietário em operação que automatiza integralmente o registro dos pedidos do Mercado Livre, eliminando tarefas manuais e aumentando a confiabilidade das informações.",
+      "Sistema proprietário em operação que automatiza todo o fluxo de registro dos pedidos, reduz o tempo operacional, elimina tarefas manuais repetitivas e aumenta a confiabilidade das informações.",
+
     techs: [
       "Node.js",
       "Mercado Livre API",
       "Google Sheets API",
       "Google APIs",
-      "REST APIs",
+      "REST APIs"
     ],
+
     highlights: [
-      "Integração ativa com Mercado Livre via API",
-      "Registro automático de pedidos no Google Sheets",
-      "Controle de duplicidades e separação por conta implementados",
+      "Integração em tempo real com o Mercado Livre",
+      "Registro automático dos pedidos no Google Sheets",
+      "Controle de duplicidades e separação por conta"
     ],
+
+    img: "/MLAplicationSystem.png",
+    projectUrl: "https://biglajesbh.com.br",
   },
   {
     tag: "IA · Em Planejamento",

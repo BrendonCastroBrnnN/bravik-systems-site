@@ -52,8 +52,7 @@ export function Cases() {
             }}
           >
             Cada projeto é apresentado com contexto, desafio,
-            solução e resultado — não apenas como um card de
-            portfólio.
+            solução e resultado
           </p>
         </motion.div>
 
