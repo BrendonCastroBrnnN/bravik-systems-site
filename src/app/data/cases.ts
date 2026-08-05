@@ -91,7 +91,8 @@ export const cases: CaseStudy[] = [
       "Apresentação técnica dos produtos",
       "Estrutura de SEO implementada",
     ],
-    img: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=900&h=500&fit=crop&auto=format",
+    img: "/SiteBigLajesPortifolio.png",
+    projectUrl: "https://biglajesbh.com.br",
   },
   {
     tag: "Sistema Interno",
