@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import { Brain } from "lucide-react";
-
-const revenueBars = [38, 55, 44, 72, 51, 83, 65, 78, 57, 92, 74, 97];
+import { Brain, BriefcaseBusiness, Check } from "lucide-react";
 
 const integrations = [
   { name: "Mercado Livre", color: "#F5E642" },
@@ -26,7 +24,6 @@ const aiMessages = [
 
 export function HeroViz() {
   const [aiText, setAiText] = useState(aiMessages[0]);
-  const [metricValue, setMetricValue] = useState(68);
 
   useEffect(() => {
     let currentMessageIndex = 0;
@@ -43,31 +40,24 @@ export function HeroViz() {
     };
   }, []);
 
-  useEffect(() => {
-    const interval = window.setInterval(() => {
-      setMetricValue((currentValue) =>
-        currentValue >= 97 ? 68 : currentValue + 1,
-      );
-    }, 80);
-
-    return () => {
-      window.clearInterval(interval);
-    };
-  }, []);
-
   return (
     <div
-      className="relative select-none"
-      style={{ height: 560 }}
+      className="relative select-none lg:translate-x-6 xl:translate-x-10"
+      style={{
+        height: 540,
+        width: "100%",
+        maxWidth: 560,
+        marginLeft: "auto",
+      }}
       aria-hidden="true"
     >
       <div
         className="absolute ag pointer-events-none"
         style={{
-          width: 320,
-          height: 320,
-          top: "15%",
-          left: "20%",
+          width: 360,
+          height: 360,
+          top: "16%",
+          left: "28%",
           borderRadius: "50%",
           background:
             "radial-gradient(circle, rgba(229,23,63,.1) 0%, transparent 70%)",
@@ -78,83 +68,218 @@ export function HeroViz() {
         className="af absolute card gradient-border p-5 shadow-2xl"
         style={{
           width: 288,
-          top: 0,
-          right: 0,
+          top: 8,
+          right: -115,
+          zIndex: 2,
         }}
       >
-        <div className="flex items-start justify-between mb-1">
-          <div>
-            <p className="mono text-xs muted mb-1">
-              Receita · Últimos 12 meses
-            </p>
-
-            <p
-              style={{
-                fontSize: 26,
-                fontWeight: 800,
-                fontFamily: "'Bricolage Grotesque',sans-serif",
-                letterSpacing: "-.02em",
-              }}
-            >
-              R$ 2.84M
-            </p>
-          </div>
-
-          <span
-            className="mono text-xs font-semibold px-2 py-1 rounded-lg"
+        <div className="mb-4">
+          <p
+            className="mono"
             style={{
-              background: "rgba(52,211,153,.1)",
-              color: "#34D399",
-              border: "1px solid rgba(52,211,153,.2)",
+              fontSize: 10,
+              color: "rgba(229,23,63,.75)",
+              marginBottom: 6,
+              fontWeight: 700,
+              letterSpacing: ".08em",
             }}
           >
-            +{metricValue}%
-          </span>
+            ARQUITETURA
+          </p>
+
+          <p
+            style={{
+              fontSize: 15,
+              fontWeight: 700,
+              color: "rgba(255,255,255,.88)",
+              lineHeight: 1.35,
+            }}
+          >
+            Soluções conectadas
+            <br />
+            de ponta a ponta
+          </p>
         </div>
 
-        <div
-          className="flex items-end gap-1 mt-4"
-          style={{ height: 64 }}
-        >
-          {revenueBars.map((height, index) => (
+        <div className="flex flex-col gap-2.5">
+          {[
+            {
+              label: "Frontend",
+              value: "React + TypeScript",
+            },
+            {
+              label: "Backend",
+              value: "Node.js + APIs",
+            },
+            {
+              label: "Dados",
+              value: "Supabase + SQL",
+            },
+            {
+              label: "Automação",
+              value: "Webhooks + Integrações",
+            },
+          ].map(({ label, value }) => (
             <div
-              key={`${height}-${index}`}
-              className="flex-1 rounded-t-sm"
+              key={label}
+              className="flex items-center justify-between gap-4"
               style={{
-                height: `${height}%`,
-                background:
-                  index === revenueBars.length - 1
-                    ? "#e5173f"
-                    : index >= revenueBars.length - 4
-                      ? "rgba(229,23,63,.35)"
-                      : "rgba(255,255,255,.06)",
-                transition: "height .5s ease",
+                paddingBottom: 8,
+                borderBottom: "1px solid rgba(255,255,255,.05)",
               }}
-            />
+            >
+              <span
+                className="mono"
+                style={{
+                  fontSize: 10,
+                  color: "rgba(255,255,255,.35)",
+                }}
+              >
+                {label}
+              </span>
+
+              <span
+                style={{
+                  fontSize: 10,
+                  fontWeight: 600,
+                  color: "rgba(255,255,255,.68)",
+                  textAlign: "right",
+                }}
+              >
+                {value}
+              </span>
+            </div>
           ))}
         </div>
 
         <div
-          className="flex justify-between mt-2 mono"
           style={{
-            fontSize: 10,
-            color: "rgba(255,255,255,.25)",
+            marginTop: 12,
+            height: 2,
+            width: "100%",
+            borderRadius: 999,
+            background:
+              "linear-gradient(90deg, #e5173f 0%, rgba(229,23,63,.25) 55%, transparent 100%)",
           }}
-        >
-          <span>Jan</span>
-          <span>Mar</span>
-          <span>Jun</span>
-          <span>Set</span>
-          <span>Dez</span>
+        />
+      </div>
+
+      <div
+        className="afc absolute card p-4 shadow-xl"
+        style={{
+          width: 230,
+          top: 138,
+          right: -92,
+          zIndex: 4,
+          borderColor: "rgba(229,23,63,.18)",
+        }}
+      >
+        <div className="flex items-center gap-3 mb-4">
+          <div
+            className="rounded-xl flex items-center justify-center flex-shrink-0"
+            style={{
+              width: 32,
+              height: 32,
+              background: "rgba(229,23,63,.12)",
+              border: "1px solid rgba(229,23,63,.18)",
+            }}
+          >
+            <BriefcaseBusiness
+              size={15}
+              color="#e5173f"
+            />
+          </div>
+
+          <div>
+            <p
+              className="mono"
+              style={{
+                fontSize: 10,
+                color: "rgba(255,255,255,.35)",
+                marginBottom: 2,
+              }}
+            >
+              PORTFÓLIO ATIVO
+            </p>
+
+            <p
+              style={{
+                fontSize: 13,
+                fontWeight: 700,
+                color: "rgba(255,255,255,.78)",
+              }}
+            >
+              Soluções reais em execução
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2.5">
+          {[
+            {
+              value: "3",
+              text: "Websites publicados",
+            },
+            {
+              value: "1",
+              text: "Automação em operação",
+            },
+            {
+              value: "1",
+              text: "ERP em desenvolvimento",
+            },
+          ].map(({ value, text }) => (
+            <div
+              key={text}
+              className="flex items-center gap-2.5"
+            >
+              <div
+                className="rounded-full flex items-center justify-center flex-shrink-0"
+                style={{
+                  width: 18,
+                  height: 18,
+                  background: "rgba(52,211,153,.1)",
+                  border: "1px solid rgba(52,211,153,.18)",
+                }}
+              >
+                <Check
+                  size={10}
+                  color="#34D399"
+                  strokeWidth={3}
+                />
+              </div>
+
+              <span
+                className="mono font-bold"
+                style={{
+                  width: 16,
+                  fontSize: 12,
+                  color: "#e5173f",
+                }}
+              >
+                {value}
+              </span>
+
+              <span
+                style={{
+                  fontSize: 11,
+                  color: "rgba(255,255,255,.53)",
+                }}
+              >
+                {text}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
 
       <div
         className="afb absolute card p-4 shadow-xl"
         style={{
-          width: 200,
-          top: 60,
-          left: 0,
+          width: 210,
+          top: 78,
+          left: 8,
+          zIndex: 3,
         }}
       >
         <p className="mono text-xs muted mb-3">
@@ -200,8 +325,9 @@ export function HeroViz() {
         className="afc absolute card p-4 shadow-xl"
         style={{
           width: 256,
-          top: 220,
-          left: 16,
+          top: 238,
+          left: 76,
+          zIndex: 4,
         }}
       >
         <div className="flex items-center gap-1.5 mb-3">
@@ -305,8 +431,9 @@ export function HeroViz() {
         className="af absolute card p-4 shadow-xl"
         style={{
           width: 224,
-          bottom: 80,
-          right: 16,
+          bottom: 96,
+          right: 0,
+          zIndex: 5,
           borderColor: "rgba(229,23,63,.2)",
         }}
       >
@@ -375,9 +502,10 @@ export function HeroViz() {
       <div
         className="afb absolute card p-3 shadow-xl"
         style={{
-          width: 192,
+          width: 200,
           bottom: 0,
-          left: 0,
+          left: 28,
+          zIndex: 3,
         }}
       >
         <div className="grid grid-cols-2 gap-2">

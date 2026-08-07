@@ -31,7 +31,7 @@ export function Hero() {
       style={{
         minHeight: "100vh",
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-start",
         paddingTop: 64,
         position: "relative",
         overflow: "hidden",
@@ -56,9 +56,11 @@ export function Hero() {
 
       <div
         className="container"
-        style={{ padding: "80px 24px" }}
+        style={{
+          padding: "16px 24px 48px",
+        }}
       >
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           <motion.div
             initial={{
               opacity: 0,
@@ -73,7 +75,7 @@ export function Hero() {
               ease: [0.16, 1, 0.3, 1],
             }}
           >
-            <div className="label mb-8">
+            <div className="label mb-5">
               <div
                 className="ap rounded-full"
                 style={{
@@ -89,11 +91,11 @@ export function Hero() {
 
             <h1
               style={{
-                fontSize: "clamp(40px,5.5vw,72px)",
+                fontSize: "clamp(40px,5vw,68px)",
                 fontWeight: 800,
-                lineHeight: 1.03,
+                lineHeight: 0.98,
                 letterSpacing: "-.035em",
-                marginBottom: 24,
+                marginBottom: 18,
                 fontFamily:
                   "'Bricolage Grotesque',sans-serif",
               }}
@@ -112,11 +114,11 @@ export function Hero() {
 
             <p
               style={{
-                fontSize: 18,
+                fontSize: 17,
                 color: "rgba(255,255,255,.48)",
-                lineHeight: 1.65,
-                maxWidth: 480,
-                marginBottom: 40,
+                lineHeight: 1.55,
+                maxWidth: 500,
+                marginBottom: 26,
               }}
             >
               O código é o meio. O resultado operacional é o
@@ -127,39 +129,41 @@ export function Hero() {
 
             <div
               className="flex flex-wrap gap-3"
-              style={{ marginBottom: 52 }}
+              style={{
+                marginBottom: 26,
+              }}
             >
               <a
                 href="#solucoes"
                 className="btn-primary"
                 style={{
-                  fontSize: 15,
-                  padding: "15px 30px",
+                  fontSize: 14,
+                  padding: "13px 26px",
                 }}
               >
                 Conhecer Soluções
-                <ArrowRight size={16} />
+                <ArrowRight size={15} />
               </a>
 
               <a
                 href={CONTACT.whatsappUrl}
                 className="btn-outline"
                 style={{
-                  fontSize: 15,
-                  padding: "15px 30px",
+                  fontSize: 14,
+                  padding: "13px 26px",
                 }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Falar com Especialista
-                <Phone size={15} />
+                <Phone size={14} />
               </a>
             </div>
 
             <div
-              className="flex flex-col gap-3"
+              className="flex flex-col gap-2.5"
               style={{
-                paddingTop: 40,
+                paddingTop: 22,
                 borderTop:
                   "1px solid rgba(255,255,255,.07)",
               }}
@@ -172,8 +176,8 @@ export function Hero() {
                   <div
                     className="rounded-lg flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: 28,
-                      height: 28,
+                      width: 27,
+                      height: 27,
                       background: "rgba(229,23,63,.1)",
                       border:
                         "1px solid rgba(229,23,63,.15)",
